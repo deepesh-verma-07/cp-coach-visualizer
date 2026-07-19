@@ -123,11 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
     coachFeedback.innerHTML = '<div class="flex items-center gap-3 text-slate-300"><i class="fa-solid fa-brain animate-pulse text-cyan-300"></i><span>Reviewing your approach via CodeVision Server...</span></div>';
     console.log('[CodeVision] loading state set, about to call fetch()');
 
-    try {
-      console.log('[CodeVision] fetch() call starting -> http://127.0.0.1:5000/api/analyze');
-      const response = await fetch('http://127.0.0.1:5000/api/analyze', {
-        method: 'POST',
-        headers: {
+try {
+  console.log('[CodeVision] fetch() call starting -> https://cp-coach-backend-07.onrender.com/api/analyze');
+  const response = await fetch('https://cp-coach-backend-07.onrender.com/api/analyze', {
+    method: 'POST',
+    headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ code: code, language: language })
@@ -724,4 +724,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Idle animation runs on load, same as before, until the user simulates something.
   sim.rafId = requestAnimationFrame(mainLoop);
+
 });
