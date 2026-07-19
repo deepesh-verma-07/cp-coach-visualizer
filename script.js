@@ -124,8 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('[CodeVision] loading state set, about to call fetch()');
 
 try {
-  console.log('[CodeVision] fetch() call starting -> https://cp-coach-backend-07.onrender.com/api/analyze');
-  const response = await fetch('https://cp-coach-backend-07.onrender.com/api/analyze', {
+ console.log('[CodeVision] fetch() call starting -> https://cp-coach-backend-2026.onrender.com/api/analyze');
+const response = await fetch('https://cp-coach-backend-2026.onrender.com/api/analyze', {
     method: 'POST',
     headers: {
           'Content-Type': 'application/json'
